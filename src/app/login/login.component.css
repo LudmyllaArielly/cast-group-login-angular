@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form){
+    border-left: 5px solid #a94442;;
+}
+
+
+.menu-form{
+    margin-top: 35px;
+}
+
+#msg-info{
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    margin: 30px 180px 0px 180px;
+
+}
+
+

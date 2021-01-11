@@ -1,0 +1,41 @@
+
+
+  <div class="container">
+    
+       <h6 id="msg-info">Informe o login</h6>
+      <form class="menu-form" action="">
+        <div class="row">
+          <div class="col-3 form-group"></div>
+          <div class="col-6 form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" #username="ngModel" [(ngModel)] = "user.username" id="username" name="username" required>
+            <div *ngIf="username.invalid" class="alert alert-danger">
+                Informe o username!
+            </div>
+          </div> 
+          <div class="col-3 form-group"></div>      
+          <div class="w-100"></div>
+          <div class="col-3 form-group"></div>
+          <div class="col-6 form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" #password="ngModel" [(ngModel)] = "user.password" id="password" name="password" required>
+            <div *ngIf="password.invalid" class="alert alert-danger">
+              Informe o password!
+            </div>
+          </div>
+          <div class="col-3 form-group"></div>
+          
+        </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <button type="button" [disabled]="username.invalid || password.invalid" (click)="login()" class="btn btn-lg btn-primary">Acessar</button>
+          </div>
+          <div class="col-3"></div>
+      </div>
+  
+      </form>
+    
+  </div>
+
+  
